@@ -1,0 +1,25 @@
+[GLOBAL]
+pants_version = "2.14.1"
+pythonpath = ["%(buildroot)s"]
+
+
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.typecheck.mypy",
+  "pants.core",
+  "pants.backend.plugin_development",
+]
+
+[anonymous-telemetry]
+    enabled = false
+
+[python]
+enable_resolves = true
+interpreter_constraints = ["CPython==3.9.*"]
+tailor_pex_binary_targets = false
+
+[python.resolves]
+python-default = "3rdparty/python/default.lock"
+
+[tailor]
+ignore_paths = ["mypy_stubs/**"]
