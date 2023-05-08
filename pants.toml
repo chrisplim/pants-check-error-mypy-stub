@@ -20,6 +20,3 @@ tailor_pex_binary_targets = false
 
 [python.resolves]
 python-default = "3rdparty/python/default.lock"
-
-[tailor]
-ignore_paths = ["mypy_stubs/**"]
